@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Yashvi Savaliya</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+<style>
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.header-wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo span {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.btn-nav {
+  padding: 10px 18px;
+  background: #000;
+  color: #fff !important;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-nav:hover {
+  background: #333;
+}
+
+/* Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #000;
+  margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}.hero-white {
+  background: linear-gradient(180deg, #ffffff, #f6f9ff);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #eef3ff;
+  color: #0d6efd;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #0b1c39;
+}
+
+.hero-title span {
+  color: #0d6efd;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #5f6b85;
+  max-width: 520px;
+  margin-bottom: 35px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-actions .btn-primary {
+  box-shadow: 0 12px 30px rgba(13,110,253,0.25);
+}
+
+.hero-actions .btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(13,110,253,0.35);
+}
+
+.hero-actions .btn-outline-primary:hover {
+  transform: translateY(-4px);
+}
+
+/* IMAGE */
+.hero-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image {
+  max-width: 380px;
+  border-radius: 22px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+.soft-circle {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(13,110,253,0.15), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-image {
+    max-width: 280px;
+    margin-top: 40px;
+  }
+}.about-modern {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.section-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #6366f1;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.section-title span {
+  color: #6366f1;
+}
+
+.profile-card {
+  background: #f9fafb;
+  border-radius: 28px;
+  padding: 50px 30px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform .4s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+}
+
+.profile-status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ecfdf5;
+  color: #10b981;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.profile-status .dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-avatar span {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.profile-card h4 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.profile-card p {
+  color: #6b7280;
+}
+
+.about-pill {
+  background: #eef2ff;
+  color: #6366f1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.about-heading {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.about-text {
+  font-size: 17px;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.stat-card {
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.stat-card h4 {
+  font-weight: 700;
+}
+
+.stat-card p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.about-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #6366f1;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-outline {
+  border: 2px solid #6366f1;
+  color: #6366f1;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.tech-stack-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.stack-badge {
+  background: #eef3ff;
+  color: #6f4ef6;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.stack-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 15px 0;
+  color: #0b1c39;
+}
+
+.stack-title span {
+  color: #6f4ef6;
+}
+
+.stack-subtitle {
+  font-size: 17px;
+  color: #6b7280;
+  max-width: 620px;
+  margin: auto;
+}
+
+.tech-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.tech-card:hover {
+  transform: translateY(-15px) rotateX(12deg) rotateZ(6deg);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.18);
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff;
+  transition: all 0.6s ease;
+}
+
+.tech-card:hover .tech-icon {
+  transform: rotate(360deg) scale(1.15);
+}
+
+/* Icon Colors */
+.tech-icon.html { background: #ff6b6b; }
+.tech-icon.css { background: #4dabf7; }
+.tech-icon.js { background: #facc15; color:#000; }
+.tech-icon.react { background: #38bdf8; }
+.tech-icon.dotnet { background: #6f4ef6; }
+.tech-icon.python { background: #22c55e; }
+.tech-icon.sql { background: #0ea5e9; }
+.tech-icon.ai { background: #9333ea; }
+.tech-icon.node { background: #22c55e; }
+.tech-icon.docker { background: #2496ed; }
+.tech-icon.git { background: #111827; }
+
+.tech-card h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #0b1c39;
+}
+
+.tech-card span {
+  font-size: 14px;
+  color: #6b7280;
+}
+.process-modern {
+  padding: 90px 0;
+  background: #f9fbff;
+}
+/* =========================
+   SERVICES – FIXED UI
+========================= */
+
+.services-modern {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.services-modern .section-head {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.services-modern .section-head h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.services-modern .section-head h2 span {
+  color: #6c63ff;
+}
+
+.services-modern .section-head p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* 🔥 GRID FIX */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+/* 🔥 CARD DESIGN */
+.service-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover animation */
+.service-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+/* ICON */
+.service-card .icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  margin-bottom: 22px;
+}
+
+/* COLOR VARIANTS */
+.service-card.blue .icon {
+  background: #eef3ff;
+  color: #3b6cff;
+}
+
+.service-card.purple .icon {
+  background: #f2ecff;
+  color: #6c63ff;
+}
+
+.service-card.orange .icon {
+  background: #fff1e6;
+  color: #ff8a00;
+}
+
+/* TEXT */
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 14.5px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* LIST */
+.service-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.service-card ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+/* =========================
+   PORTFOLIO – MODERN
+========================= */
+
+.portfolio-modern {
+  padding: 110px 0;
+  background: #ffffff;
+}
+
+.portfolio-head {
+  max-width: 720px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.section-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #6c63ff;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.portfolio-head h2 {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.portfolio-head h2 span {
+  color: #6c63ff;
+}
+
+.portfolio-head p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 36px;
+}
+
+/* CARD */
+.portfolio-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.45s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+.portfolio-image {
+  height: 220px;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.1);
+}
+
+/* CONTENT */
+.portfolio-content {
+  padding: 28px 26px 32px;
+}
+
+.portfolio-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.portfolio-content .tech {
+  display: inline-block;
+  font-size: 13px;
+  color: #6c63ff;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.portfolio-content p {
+  font-size: 14.5px;
+  color: #555;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.portfolio-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  color: #6c63ff;
+}
+.experience-section {
+  padding: 10px 0;
+  background: #ffffff;
+}
+
+.section-header .badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #eef2ff;
+  color: #5b5cff;
+  font-size: 13px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #666;
+  max-width: 520px;
+  margin: auto;
+}
+.experience-section {
+  padding: 10px 0;
+  background: #fff;
+}
+
+/* Header */
+.section-header .badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #eef2ff;
+  color: #5b5cff;
+  font-size: 13px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #666;
+  max-width: 520px;
+  margin: auto;
+}
+
+/* Spacing */
+.experience-row {
+  margin-top: 60px;
+}
+
+.experience-col {
+  margin-bottom: 30px;
+}
+
+/* Card */
+.experience-card {
+  height: 100%;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  border-top: 5px solid #5b5cff;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 70px rgba(91,92,255,0.18);
+}
+
+/* Content */
+.experience-card .year {
+  font-size: 13px;
+  font-weight: 600;
+  color: #5b5cff;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.experience-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.experience-card .tech {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.experience-card .desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+.why-us-light {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+/* Header */
+.why-us-light .badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #eef2ff;
+  color: #5b5cff;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.why-us-light h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.why-us-light h2 span {
+  color: #5b5cff;
+}
+
+.why-us-light p {
+  max-width: 520px;
+  margin: auto;
+  color: #666;
+}
+
+/* Card */
+.why-card {
+  height: 100%;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #5b5cff, #9a8cff);
+  opacity: 0;
+  transition: 0.35s;
+}
+
+.why-card:hover::before {
+  opacity: 0.08;
+}
+
+.why-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 80px rgba(91,92,255,0.25);
+}
+
+/* Icon */
+.why-card .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #eef2ff;
+  color: #5b5cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+/* Text */
+.why-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.why-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Button */
+.btn-primary-light {
+  display: inline-block;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #5b5cff, #9a8cff);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(91,92,255,0.4);
+  transition: 0.3s;
+}
+
+.btn-primary-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(91,92,255,0.55);
+}
+.faq-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+/* Header */
+.faq-header {
+  margin-bottom: 50px;
+}
+
+.faq-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #f1efff;
+  color: #7b61ff;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.faq-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.faq-header h2 span {
+  color: #7b61ff;
+}
+
+/* FAQ Box */
+.faq-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: 0.35s;
+}
+
+.faq-item.active {
+  background: linear-gradient(135deg, #7b61ff, #9f8cff);
+  color: #fff;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 26px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: inherit;
+}
+
+.faq-question .icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 26px;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: inherit;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 26px 24px;
+}
+
+/* CTA */
+.faq-cta {
+  margin-top: 50px;
+}
+
+.faq-cta p {
+  margin-bottom: 14px;
+  color: #666;
+}
+
+.faq-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.faq-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(15,23,42,0.4);
+}
+.founder-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+/* Headings */
+.section-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #f2efff;
+  color: #7b61ff;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.section-title span {
+  color: #7b61ff;
+}
+
+.section-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
+/* Card */
+.founder-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 40px;
+  border-radius: 26px;
+  background: linear-gradient(145deg, #ffffff, #f7f6ff);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+  position: relative;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Avatar */
+.founder-avatar {
+  width: 110px;
+  height: 110px;
+  margin: -90px auto 20px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #7b61ff, #a18bff);
+}
+
+.founder-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+/* Quote */
+.founder-quote {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Name */
+.founder-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.founder-role {
+  color: #7b61ff;
+  font-size: 14px;
+}
+
+/* Stats */
+.founder-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.stat h5 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.stat span {
+  font-size: 13px;
+  color: #666;
+}
+.contact-modern {
+  padding: 10px 0;
+  background: #ffffff;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.contact-info-card h3 {
+  font-weight: 800;
+}
+
+.contact-info-card .role {
+  color: #7b61ff;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.contact-info-card .desc {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.info-list .info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.info-item i {
+  color: #7b61ff;
+  font-size: 18px;
+}
+
+.social-links a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #555;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #7b61ff;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  outline: none;
+  border-color: #7b61ff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #7b61ff, #9b8cff);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+#formStatus {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+</style>
+  </head>
+
+  <body class="index-page">
+   <header id="header" class="main-header">
+  <div class="container header-wrap">
+
+    <!-- Logo -->
+    <a href="#hero" class="logo">
+      <span>YSIFY</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="btn-nav">Contact</a>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.querySelector(".nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+    <main class="main">
+      <!-- Hero Section -->
+    <!-- HERO SECTION START -->
+<section id="hero" class="hero-white">
+  <div class="container">
+    <div class="row align-items-center ">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6">
+        <span class="hero-badge">
+          Founder • Full-Stack Software Engineer
+        </span>
+
+        <h1 class="hero-title">
+          I Build <span>Scalable Web & AI Solutions</span><br>
+          for Real Businesses
+        </h1>
+
+        <p class="hero-subtitle">
+          Founder-led development specializing in .NET, Python,
+          APIs, AI automation, and production-ready systems.
+        </p>
+
+        <!-- CTA -->
+        <div class="hero-actions">
+          <a href="assets/yashviresume.pdf"
+             target="_blank"
+             download
+             class="btn btn-primary btn-lg">
+            Download Resume
+          </a>
+
+          <a href="https://github.com/yashvi36"
+             target="_blank"
+             class="btn btn-outline-primary btn-lg">
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="col-lg-6 text-center">
+        <div class="hero-image-wrapper">
+          <img src="yashvi.jpg" alt="Yashvi Savaliya" class="hero-image">
+          <span class="soft-circle"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- HERO SECTION END -->
+
+<!-- HERO SECTION END -->
+
+      <!-- /Hero Section -->
+
+
+  <!-- ABOUT SECTION START -->
+<section id="about" class="about-modern">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <span class="section-badge">ABOUT ME</span>
+      <h2 class="section-title">
+        Building Digital <span>Excellence</span>
+      </h2>
+    </div>
+
+    <div class="row align-items-center g-5">
+
+      <!-- PROFILE CARD -->
+      <div class="col-lg-5 text-center">
+        <div class="profile-card ">
+
+          <div class="profile-status">
+            <span class="dot"></span> Available
+          </div>
+
+          <div class="profile-avatar">
+            <span>YSIFY</span>
+          </div>
+
+          <h4>Yashvi Savaliya</h4>
+          <p>Founder & Developer</p>
+
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="col-lg-7">
+       
+
+        <h3 class="about-heading">
+          Founder of YSIFY Solutions
+        </h3>
+
+        <p class="about-text">
+          I am Yashvi Savaliya, founder of YSIFY Solutions — a technology
+          consultancy focused on web development, AI automation, and
+          custom software applications.
+        </p>
+
+        <p class="about-text">
+          I specialize in building modern digital systems that solve real
+          business problems including lead automation, workflow optimization,
+          secure authentication, and scalable platforms.
+        </p>
+
+        <!-- STATS -->
+        <div class="about-stats">
+          <div class="stat-card">
+            <h4>Founder</h4>
+            <p>YSIFY Solutions</p>
+          </div>
+
+          <div class="stat-card">
+            <h4>2+ Years</h4>
+            <p>Experience</p>
+          </div>
+
+          <div class="stat-card">
+            <h4>15+ Projects</h4>
+            <p>Web & Automation</p>
+          </div>
+
+          <div class="stat-card">
+            <h4>Global</h4>
+            <p>Clients</p>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="about-actions">
+          <a href="assets/yashviresume.pdf" target="_blank" class="btn-primary">
+            Download Resume
+          </a>
+          <a href="https://github.com/yashvi36" target="_blank" class="btn-outline">
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ABOUT SECTION END -->
+
+
+      <!-- /About Section -->
+<!-- Tech Stack Section -->
+<section id="skills" class="tech-stack-section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="stack-badge">TECH STACK</span>
+      <h2 class="stack-title">
+        Technologies I <span>Work With</span>
+      </h2>
+      <p class="stack-subtitle">
+        Modern tools & frameworks I use to build scalable,
+        secure and high-performance products.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon html">H</div>
+          <h5>HTML5</h5>
+          <span>Frontend</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon css">C</div>
+          <h5>CSS3</h5>
+          <span>Styling</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon js">JS</div>
+          <h5>JavaScript</h5>
+          <span>Logic</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon react">R</div>
+          <h5>React.js</h5>
+          <span>Frontend</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon dotnet">.NET</div>
+          <h5>ASP.NET Core</h5>
+          <span>Backend</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon python">Py</div>
+          <h5>Python</h5>
+          <span>Backend / AI</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon sql">DB</div>
+          <h5>SQL / PostgreSQL</h5>
+          <span>Database</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="tech-card">
+          <div class="tech-icon ai">AI</div>
+          <h5>AI Automation</h5>
+          <span>n8n / APIs</span>
+        </div>
+      </div>
+<!-- Node.js -->
+<div class="col-md-4 col-lg-3">
+  <div class="tech-card">
+    <div class="tech-icon node">N</div>
+    <h5>Node.js</h5>
+    <span>Backend</span>
+  </div>
+</div>
+
+<!-- Docker -->
+<div class="col-md-4 col-lg-3">
+  <div class="tech-card">
+    <div class="tech-icon docker">D</div>
+    <h5>Docker</h5>
+    <span>DevOps</span>
+  </div>
+</div>
+
+<!-- Git / GitHub -->
+<div class="col-md-4 col-lg-3">
+  <div class="tech-card">
+    <div class="tech-icon git">Git</div>
+    <h5>Git & GitHub</h5>
+    <span>Version Control</span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="services-modern">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge">Services</span>
+      <h2>What I <span>Offer</span></h2>
+      <p>Digital solutions crafted for performance, scale & growth.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card blue">
+        <div class="icon">🌐</div>
+        <h3>Web Development</h3>
+        <p>Modern, responsive & SEO-friendly websites.</p>
+        <ul>
+          <li>Business Websites</li>
+          <li>Admin Panels</li>
+          <li>Landing Pages</li>
+        </ul>
+      </div>
+
+      <div class="service-card purple">
+        <div class="icon">⚙️</div>
+        <h3>AI Automation</h3>
+        <p>Automate workflows using AI & APIs.</p>
+        <ul>
+          <li>Lead Automation</li>
+          <li>Email & CRM</li>
+          <li>n8n Workflows</li>
+        </ul>
+      </div>
+
+      <div class="service-card orange">
+        <div class="icon">🧠</div>
+        <h3>Custom Software</h3>
+        <p>Scalable backend systems & APIs.</p>
+        <ul>
+          <li>ASP.NET Core</li>
+          <li>Python Backend</li>
+          <li>Secure APIs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="experience-section">
+  <div class="container">
+
+    <div class="section-header text-center">
+      <span class="badge">Experience</span>
+      <h2>My Journey</h2>
+      <p>Projects & experience I have built with real-world impact</p>
+    </div>
+
+    <div class="row experience-row">
+
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 experience-col">
+        <div class="experience-card">
+          <span class="year">2025 – Present</span>
+          <h3>Founder – YSIFY Solutions</h3>
+          <p class="tech">Web • AI Automation • Custom Software</p>
+          <p class="desc">
+            Founded YSIFY Solutions to deliver scalable web platforms,
+            automation systems, and secure backend solutions for startups
+            and global clients.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 experience-col">
+        <div class="experience-card">
+          <span class="year">2025 – Present</span>
+          <h3>Full-Stack Developer</h3>
+          <p class="tech">ASP.NET Core • Python • APIs</p>
+          <p class="desc">
+            Built production-ready applications including authentication,
+            dashboards, REST APIs, and automation workflows.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 experience-col">
+        <div class="experience-card">
+          <span class="year">2025</span>
+          <h3>Internship & Professional Training</h3>
+          <p class="tech">Web Development • Backend Engineering</p>
+          <p class="desc">
+            Completed hands-on training with real projects focused on
+            backend logic, database design, and deployment practices.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="why-us-light">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header text-center">
+      <span class="badge">Why Choose Us</span>
+      <h2>Why <span>YSIFY Solutions</span></h2>
+      <p>
+        We bring expertise, dedication, and a founder-driven approach
+        to every project we undertake.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 mt-5">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="why-card">
+          <div class="icon">👤</div>
+          <h4>Founder-Driven Quality</h4>
+          <p>Personal accountability and ownership on every project.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="why-card">
+          <div class="icon">💻</div>
+          <h4>Clean, Scalable Code</h4>
+          <p>Production-ready architecture from day one.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="why-card">
+          <div class="icon">🤖</div>
+          <h4>AI Expertise</h4>
+          <p>Advanced automation & intelligent workflows.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="why-card">
+          <div class="icon">🎨</div>
+          <h4>Modern UI Design</h4>
+          <p>Clean, user-focused and conversion-driven interfaces.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="why-card">
+          <div class="icon">💬</div>
+          <h4>Clear Communication</h4>
+          <p>Transparent updates and smooth collaboration.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="why-card">
+          <div class="icon">⏱️</div>
+          <h4>On-Time Delivery</h4>
+          <p>Reliable timelines with post-launch support.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-5">
+      <a href="#contact" class="btn-primary-light">
+        Start Your Project Today
+      </a>
+    </div>
+
+  </div>
+</section>
+
+     <!-- Single Testimonial Section -->
+      <section id="testimonial" class="testimonial section light-background">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About My Work</h2>
+          <div class="title-shape">
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+          <p>A short message from me — the founder</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-testimonial-card">
+            <div class="profile-img">
+              <img src="yashvi.jpg" alt="" />
+            </div>
+
+            <h3>Yashvi Savaiya</h3>
+            <span class="role">Founder & Full-Stack Developer</span>
+
+            <p class="feedback">
+              “As a startup founder, I personally ensure quality in every
+              project I build. My focus is on clean code, modern UI, and
+              delivering reliable solutions — whether it's Web Development,
+              Python, Django, or ASP.NET Core. I believe in building products
+              that create real value for users.”
+            </p>
+          </div>
+        </div>
+      </section>
+<section id="faq" class="faq-section">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="faq-header text-center">
+      <span class="faq-badge">FAQ</span>
+      <h2>
+        Frequently Asked <span>Questions</span>
+      </h2>
+    </div>
+
+    <!-- FAQ List -->
+    <div class="faq-list">
+
+      <!-- Item 1 -->
+      <div class="faq-item active">
+        <button class="faq-question">
+          What services does YSIFY Solutions offer?
+          <span class="icon">−</span>
+        </button>
+        <div class="faq-answer">
+          We offer comprehensive digital solutions including modern website
+          development, AI automation & workflow systems, and custom software
+          applications. Our services range from business websites and landing
+          pages to AI chatbots, CRM integrations, and secure backend systems.
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does a typical project take?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Project timelines depend on scope and complexity. Small websites
+          typically take 2–3 weeks, while custom software and automation systems
+          may take 4–8 weeks or more.
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you work with international clients?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes, I work with clients from India and abroad, delivering scalable
+          solutions with clear communication and reliable timelines.
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          What is your pricing structure?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Pricing is flexible and depends on project requirements. I offer
+          fixed-price projects, milestone-based pricing, and long-term
+          engagement models.
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you provide ongoing support after completion?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes, I provide maintenance, updates, and long-term support to ensure
+          your solution remains secure and up to date.
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          What technologies do you specialize in?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          I specialize in ASP.NET Core, Python, Django, REST APIs, SQL databases,
+          AI automation, and modern frontend technologies.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="faq-cta text-center">
+      <p>Still have questions?</p>
+      <a href="#contact" class="faq-btn">Contact Us</a>
+    </div>
+
+  </div>
+</section>
+<script>
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+
+    btn.addEventListener("click", () => {
+      faqItems.forEach(i => {
+        if (i !== item) {
+          i.classList.remove("active");
+          i.querySelector(".icon").textContent = "+";
+        }
+      });
+
+      item.classList.toggle("active");
+      const icon = item.querySelector(".icon");
+      icon.textContent = item.classList.contains("active") ? "−" : "+";
+    });
+  });
+</script>
+
+     
+     <section id="contact" class="contact-modern">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <span class="section-badge">Contact</span>
+      <h2 class="section-title">
+        Let’s Build Something <span>Great Together</span>
+      </h2>
+      <p class="section-subtitle">
+        Have a project in mind? Fill the form and I’ll get back to you personally.
+      </p>
+    </div>
+
+    <div class="row g-5 align-items-stretch">
+
+      <!-- LEFT INFO -->
+      <div class="col-lg-5">
+        <div class="contact-info-card">
+          <h3>Yashvi Savaliya</h3>
+          <p class="role">Founder & Full-Stack Software Engineer</p>
+
+          <p class="desc">
+            I help startups and businesses build scalable web platforms,
+            automation systems, and secure backend solutions.
+          </p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <i class="bi bi-envelope"></i>
+              <span>info@ysify.in</span>
+            </div>
+
+            <div class="info-item">
+              <i class="bi bi-telephone"></i>
+              <span>+91 99042 30962</span>
+            </div>
+
+            <div class="info-item">
+              <i class="bi bi-geo-alt"></i>
+              <span>Surat, Gujarat, India</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/yashvi36" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <form id="contactForm">
+            <div class="row g-4">
+
+              <div class="col-md-6">
+                <input type="text" id="name" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" id="email" placeholder="Your Email" required>
+              </div>
+
+              <div class="col-12">
+                <input type="text" id="subject" placeholder="Subject" required>
+              </div>
+
+              <div class="col-12">
+                <textarea id="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn-submit">
+                  Send Message
+                </button>
+                <p id="formStatus"></p>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">YSify</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">Yashvi Savaliya</a>
+        </div>
+      </div>
+    </footer>
+    </main>
+
+
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
